@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  mongo:
+    container_name: mongo3
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks: 
+      - backend
+networks:
+  backend:
+    name: "mongodb"
+    driver: "bridge"
